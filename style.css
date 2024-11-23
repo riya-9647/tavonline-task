@@ -5,10 +5,19 @@
 }
 body {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1220px;
   background-color: black;
-  color: white;
   font-family: "Poppins", sans-serif;
+}
+body p {
+  color: grey;
+}
+body h1,
+h2,
+h3,
+h4,
+h5 {
+  color: white;
 }
 
 /* utility class */
@@ -25,15 +34,28 @@ body {
 }
 
 /* header start */
-.first img.avatar {
+header.first img.avatar {
   width: 25%;
   border-top-left-radius: 20px;
   border-top-right-radius: 150px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 150px;
 }
-.first img {
-  width: 30px;
+.ham-burger {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: yellow;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ham-burger img {
+  width: 100%;
+  padding: 10px;
 }
 header.first .data {
   width: 70%;
@@ -43,8 +65,11 @@ header.first .data h3 {
   font-size: 25px;
   padding: 10px 0;
 }
+header.first .data .web {
+  color: yellow;
+}
 header.first h1 {
-  font-size: 50px;
+  font-size: 40px;
   padding-bottom: 10px;
 }
 header.first .wrapcontact {
@@ -52,14 +77,15 @@ header.first .wrapcontact {
   width: 80%;
   padding-left: 20px;
   padding-bottom: 30px;
+  border-top: 1px solid grey;
 }
-header.first .contact p {
+header.first .contact h4 {
   padding-left: 20px;
 }
 header.first .contactsnd {
   padding-left: 20px;
 }
-header.first .contactsnd p {
+header.first .contactsnd h4 {
   padding-left: 20px;
 }
 
@@ -68,7 +94,7 @@ header.first .contactsnd p {
 /* para section start */
 
 section.para {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -78,8 +104,10 @@ section.para {
 
 section.what {
   font-size: 20px;
-  border-bottom: 5px solid yellow;
   max-width: fit-content;
+}
+section.what h2 {
+  border-bottom: 5px solid yellow;
 }
 
 /* what section end */
@@ -90,6 +118,7 @@ section.features {
 }
 section.features .smallbaox {
   width: 25%;
+  margin-bottom: 2rem;
 }
 section.features .smallbaox .image {
   width: 25%;
@@ -112,7 +141,8 @@ section.comment .icon {
   display: flex;
 }
 section.comment .icon img {
-  width: 30px;
+  width: 10;
+  height: 8vh;
 }
 section.comment .comment-para {
   width: 80%;
@@ -121,23 +151,29 @@ section.comment .comment-para p {
   font-size: 15px;
   line-height: 1.5;
   padding-bottom: 20px;
+  border-bottom: 1px solid grey;
 }
 section.comment .comment-para .innercmt h5,
 p {
   padding-left: 20px;
 }
+section.comment .comment-para .inner {
+  padding-top: 20px;
+}
 
 /* comment section end */
 
 /* footer start */
-section.footer {
+footer.footer {
   padding: 20px;
   width: 100%;
+  font-size: 10px;
 }
-section.footer .social-media {
+footer.footer .social-media {
   width: 25%;
+  color: white;
 }
-section.footer .unorderlist li {
+footer.footer .unorderlist li {
   list-style-type: none;
 }
 
@@ -148,22 +184,81 @@ section.footer .unorderlist li {
 @media (max-width: 768px) {
   header.first {
     flex-direction: column;
+    padding: 15px;
   }
-  header.first .avatar {
+  header.first img.avatar {
     width: 100%;
   }
   header.first .data {
     width: 100%;
-    text-align: center;
+    padding-left: 10px;
+    /* text-align: center; */
   }
   header.first .data h3 {
     font-size: 20px;
+    padding: 20px 0;
   }
   header.first h1 {
-    font-size: 20px;
+    font-size: 25px;
   }
   header.first .wrapcontact {
     width: 100%;
     flex-direction: column;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  header.first .contact h4 {
+    padding-right: 150px;
+    /* padding-bottom: 30px; */
+  }
+  header.first .contact {
+    padding-bottom: 30px;
+  }
+
+  section.para {
+    width: 100%;
+    font-size: 15px;
+  }
+  section.what {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+  section.features {
+    flex-direction: column;
+    width: 100%;
+  }
+  section.features .smallbaox {
+    width: 70%;
+  }
+  section.features .smallbaox .image {
+    width: 100%;
+  }
+  section.features .smallbaox h3 {
+    font-size: 15px;
+    width: 100%;
+    /* padding-right: 30px; */
+  }
+  section.features .smallbaox .imgdata {
+    /* padding-right: 50px; */
+  }
+
+  section.comment {
+    width: 100%;
+    flex-direction: column;
+    font-size: 15px;
+  }
+  section.comment .icon img {
+    padding-left: 15px;
+  }
+  section.comment .comment-para {
+    padding-bottom: 20px;
+  }
+  footer.footer {
+    flex-direction: column;
+    width: 100%;
+  }
+  footer.footer .social-media {
+    width: 75%;
+    padding-top: 20px;
   }
 }
