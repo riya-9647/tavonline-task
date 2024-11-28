@@ -36,10 +36,12 @@ h5 {
 /* header start */
 header.first img.avatar {
   width: 25%;
+  height: 340px;
   border-top-left-radius: 20px;
   border-top-right-radius: 150px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 150px;
+  object-fit: cover;
 }
 .ham-burger {
   width: 40px;
@@ -62,14 +64,14 @@ header.first .data {
   height: 100%;
 }
 header.first .data h3 {
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px 0;
 }
 header.first .data .web {
   color: yellow;
 }
 header.first h1 {
-  font-size: 40px;
+  font-size: 30px;
   padding-bottom: 10px;
 }
 header.first .wrapcontact {
@@ -79,11 +81,17 @@ header.first .wrapcontact {
   padding-bottom: 30px;
   border-top: 1px solid grey;
 }
+header.first .contact img{
+  width: 20px;
+}
 header.first .contact h4 {
   padding-left: 20px;
 }
+header.first .contactsnd img{
+  width: 28px;
+}
 header.first .contactsnd {
-  padding-left: 20px;
+  padding-left: 15px;
 }
 header.first .contactsnd h4 {
   padding-left: 20px;
